@@ -1,4 +1,4 @@
-/* -------------------------------- 홈페이지 기본 세팅 (기본값 0으로 초기화 작업) 시작 -------------------------------- */
+/* ================== 홈페이지 기본 세팅 (기본값 0으로 초기화 작업) 시작 ================== */
 
 /* 블럭요소에 있는 모든 여백제거 */
 body,
@@ -21,6 +21,7 @@ input,
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -55,26 +56,12 @@ label {
   cursor: text;
 }
 /* 기본글씨체, 크기, 줄간격, 색상 */
-/* 관리자 페이지는 #ebebeb , 담당자,작성자는 #f3f6fa 색상을 줌 */
 body {
   font-family: "NanumBarunGothic", sans-serif;
   font-size: 16px;
-  color: #333333;
-  /* background-color: #f3f6fa; */
-  background-color: #ebebeb;
-  height: 100%;
-  min-height: 100vh;
-  /* padding-bottom: 50px; */
-  position: relative;
-  box-sizing: border-box;
+  color: #333;
 }
-/* @media screen and (max-height: 990px) {
-  body {
-    min-height: 990px;
-  }
-} */
 
-/* section제목으로 입력한 내용을 화면에서만 사라지게, 리더기로는 읽을수 있도록 */
 .blind {
   position: absolute;
   top: -9999px;
@@ -113,7 +100,7 @@ textarea {
   resize: none;
 }
 
-/* -------------------------------- 홈페이지 기본 세팅 (기본값 0으로 초기화 작업) 끝 -------------------------------- */
+/* ================== 홈페이지 기본 세팅 (기본값 0으로 초기화 작업) 끝 ================== */
 
 /* 대표 폰트 나눔바름고딕 */
 
@@ -135,417 +122,28 @@ textarea {
   src: url(../../public/fonts/NanumBarunGothicBold.woff) format("woff");
 }
 
-/* ------------------------------------------------------  공통 스타일 css ------------------------------------------------------ */
-
-/* 대표 색상 */
+/* ================== 대표 색상 ================== */
 
 .main_color {
-  color: #167ee6 !important;
+  color: #ffdb00 !important;
 }
-
-.sub_color {
-  color: #4866af;
-}
-
-.third_color {
-  color: #005b9a;
-}
-
 .text_color {
-  color: #333333;
+  color: #333333 !important;
 }
-
-.sub_text_color {
-  color: #666666;
+.text_sub_color {
+  color: #666666 !important;
 }
-
-.gray_color {
-  color: #aaaaaa;
-}
-
 .white_color {
   color: #ffffff !important;
 }
-
-.yello_color {
-  color: #f6c14e;
-}
-
-.yello_color_l {
-  color: #fef4e2;
-}
-
-.greend_color {
-  color: #6dbb58;
-}
-
-.green_color_l {
-  color: #eef6ec;
-}
-
 .red_color {
-  color: #cc291c;
+  color: #cc291c !important;
 }
+/* ================== 버튼 색상 ================== */
 
-.red_color_l {
-  color: #fce7e8;
-}
+/* ================== 공통 버튼 ================== */
 
-.orange_color {
-  color: #ed6e45;
-}
-
-.orange_color_l {
-  color: #fce8e4;
-}
-
-/* 버튼 색상 */
-
-.primary_btn {
-  background-color: #167ee6;
-}
-.primary_btn:hover {
-  background-color: #0d6dcd;
-}
-.secondary_btn {
-  background-color: #4866af;
-}
-.secondary_btn:hover {
-  background-color: #324c8b;
-}
-.third_btn {
-  background-color: #324c8b;
-}
-.third_btn:hover {
-  background-color: #294179;
-}
-.agree_btn {
-  background-color: #f6c14e;
-}
-.agree_btn:hover {
-  background-color: #e3b043;
-}
-.danger_btn {
-  background-color: #cc291c;
-}
-.danger_btn:hover {
-  background-color: #b71e13;
-}
-.cancel_btn {
-  background-color: #aaaaaa;
-}
-.cancel_btn:hover {
-  background-color: #929292;
-}
-.dark_sub_btn {
-  background-color: #666666;
-}
-.dark_sub_btn:hover {
-  background-color: rgb(40, 39, 39);
-}
-.delete_btn {
-  background-color: #333333;
-}
-.delete_btn:hover {
-  background-color: #282828;
-}
-.some_btn_a {
-  background-color: #284275;
-}
-.some_btn_b {
-  background-color: #2f4984;
-}
-.some_btn_c {
-  background-color: #4866af;
-}
-.some_btn_d {
-  background-color: #2b74bb;
-}
-.some_btn_e {
-  background-color: #414161;
-}
-.some_btn_f {
-  background-color: #7d8cad;
-}
-.border_btn {
-  border: 1px solid #ccc;
-  background-color: rgb(248, 248, 248);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 2px -2px;
-}
-.border_btn:hover {
-  border: 1px solid #999;
-  background-color: #fafafa;
-}
-.border_btn_blue {
-  border: 1px solid #167ee6;
-  background-color: rgb(249, 249, 255);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 2px -2px;
-  color: #167ee6;
-  font-weight: bold;
-}
-.border_btn_blue:hover {
-  border: 1px solid #0e62b5;
-  background-color: #fafafa;
-  color: #0e62b5;
-}
-.border_sub_btn_blue {
-  border: 1px solid #4866af;
-  background-color: rgb(243, 243, 249);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 2px -2px;
-  color: #4866af;
-  font-weight: bold;
-}
-.border_sub_btn_blue:hover {
-  border: 1px solid #4866af;
-  background-color: #fafafa;
-  color: #4866af;
-}
-
-.table_situation_text {
-  display: inline-block;
-  font-size: 14px !important;
-  box-sizing: border-box;
-  position: relative;
-  padding-left: 10px;
-}
-.table_situation_text::before {
-  display: block;
-  content: "";
-  clear: both;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
-}
-.main_border {
-  color: #167ee6;
-}
-.main_border::before {
-  background-color: #167ee6;
-}
-.sub_border {
-  color: #4866af;
-}
-.sub_border::before {
-  background-color: #4866af;
-}
-.cancel_border {
-  color: #666;
-}
-.cancel_border::before {
-  background-color: #666;
-}
-.delete_border {
-  color: #cc291c;
-}
-.delete_border::before {
-  background-color: #cc291c;
-}
-/* -------------------------------- 자주 쓰이는 요소 -------------------------------- */
-
-/* 공통 버튼 */
-
-.btn {
-  display: inline-block;
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-}
-.btn_two {
-  width: 180px;
-}
-.auto_btn {
-  display: inline-block;
-  width: auto;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.sub_auto_btn {
-  display: inline-block;
-  width: 100px;
-  min-width: 80px;
-  height: auto;
-  line-height: normal;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.sub_auto_btn_42px {
-  width: 100px;
-  height: 42px;
-  line-height: 42px;
-  padding: 0 10px;
-}
-.sub_btn {
-  display: inline-block;
-  width: 100px;
-  height: auto;
-  line-height: normal;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.sub_auto_btn_auto {
-  width: auto;
-}
-.sub_btn_short {
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0;
-  cursor: pointer;
-}
-.full_btn {
-  display: inline-block;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-}
-.add_btn {
-  float: right;
-  cursor: pointer;
-  position: relative;
-}
-.w_auto_btn {
-  width: auto !important;
-  padding: 0 10px !important;
-}
-.date_btn {
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-.close_btn {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
-}
-
-.input_btn {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 10;
-  border-radius: 0px;
-}
-.input_btn_content {
-  width: 100px !important;
-  height: 42px;
-  line-height: 42px;
-  padding: 0;
-}
-.input_btn_two {
-  position: absolute;
-  right: 17px;
-  top: 6px;
-  padding: 7px 15px;
-}
-.input_btn_three {
-  position: absolute;
-  right: 5px;
-  top: 37px;
-  padding: 7px 15px;
-}
-.table_th_btn {
-  margin-left: 5px;
-}
-.menu_select_btn_box {
-  float: right;
-}
-.menu_select_btn {
-  display: inline-block;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-/* 스위치 */
-
-.switch {
-  grid-column: 1/2;
-  display: grid;
-  grid-template-columns: repeat(2, min-content);
-  /*grid-template-columns: repeat(2, -webkit-min-content);*/
-  grid-template-columns: repeat(2, min-content);
-  grid-gap: 1rem;
-  justify-self: center;
-}
-.switch_1 {
-  width: 6rem;
-}
-.switch input {
-  display: none;
-}
-.switch_1 label {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
-  background: rgba(255, 255, 255, 0);
-  position: relative;
-  cursor: pointer;
-  border-radius: 1.6rem;
-}
-.switch input:checked ~ label::before {
-  opacity: 1;
-}
-.switch_1 label::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(330deg, #3951a1 0%, #0d6dcd 50%, #2b74bb 100%);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-.switch input:checked ~ label::after {
-  left: 57%;
-  background: #e4ebf5;
-}
-.switch_1 label::after {
-  content: "";
-  position: absolute;
-  left: 0.4rem;
-  width: 2.1rem;
-  height: 2.1rem;
-  border-radius: 50%;
-  background: #9baacf;
-  transition: all 0.4s ease;
-}
-.switch_table {
-  display: inline-block;
-}
-.switch_table .switch_1 {
-  float: left;
-}
-.switch_table span {
-  float: left;
-  margin-left: 10px;
-}
-/* 기본 css */
+/* ================== 기본 css ================== */
 
 .mr_5 {
   margin-right: 5px !important;
@@ -560,16 +158,16 @@ textarea {
   margin-left: 0px !important;
 }
 .ml_5 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 .ml_10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 .ml_30 {
-  margin-left: 30px;
+  margin-left: 30px !important;
 }
 .ml_55 {
-  margin-left: 55px;
+  margin-left: 55px !important;
 }
 .mr_18 {
   margin-right: 18px !important;
@@ -617,7 +215,7 @@ textarea {
   margin-top: 30px !important;
 }
 .mt_50 {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 .m_center {
   margin: 0 auto !important;
@@ -671,7 +269,7 @@ textarea {
   padding-top: 20px !important;
 }
 .ptb_30 {
-  padding: 30px 0;
+  padding: 30px 0 !important;
 }
 .p_zero {
   padding: 0 !important;
@@ -681,9 +279,6 @@ textarea {
 }
 .p_20 {
   padding: 20px !important;
-}
-.p_8_15 {
-  padding: 8px 15px;
 }
 .text_center {
   text-align: center !important;
@@ -695,13 +290,13 @@ textarea {
   text-align: right !important;
 }
 .text_underline {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 .cursor_pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .text_underline_none {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .float_left {
   float: left !important;
@@ -730,13 +325,8 @@ textarea {
 .h_100 {
   height: 100% !important;
 }
-.h_35 {
-  height: 35px !important;
-  line-height: 35px !important;
-  padding: 0px !important;
-}
 .font_bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 .font_normal {
   font-weight: normal !important;
@@ -760,7 +350,7 @@ textarea {
   font-size: 12px !important;
 }
 .border_box {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 .border_top {
   border-top: 1px solid #eee !important;
@@ -776,33 +366,136 @@ textarea {
 }
 .position_static {
   position: static !important;
-  transform: translate(0) !important;
 }
 .position_relative {
-  position: relative;
-}
-.min_width_800px {
-  min-width: 800px !important;
-}
-.min_width_900px {
-  min-width: 900px !important;
+  position: relative !important;
 }
 .font_weight_bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 .break_all {
-  word-break: break-all;
+  word-break: break-all !important;
 }
 .border_1px_gray {
   border: 1px solid #ccc !important;
 }
-.height_46px {
-  height: 46px !important;
-  line-height: 29px;
-}
-.width_20px {
-  width: 20px !important;
-}
 .line_height_normal {
   line-height: normal !important;
+}
+
+/* ================== header ================== */
+header {
+}
+nav {
+  background-color: #181818;
+}
+.navLogo {
+  float: left;
+  padding: 15px;
+  background-color: #000000;
+}
+.navLogo img {
+  width: 130px;
+}
+.navRight {
+  width: 100%;
+  padding: 20px 30px;
+}
+.navMenu {
+  float: left;
+  margin-left: 30px;
+}
+.navMenu li {
+  float: left;
+  margin-right: 30px;
+}
+.navMenu li a {
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+}
+.navMenu li:hover a {
+  color: #ffdb00;
+}
+.navMenu li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #ffdb00;
+  position: absolute;
+  top: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.navMenu > li:hover > a::after {
+  width: 100%;
+}
+.navMenu > li > a.active {
+  color: #ffdb00;
+}
+.navMenu > li > a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffdb00;
+  position: absolute;
+  top: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.navGnd {
+  float: right;
+}
+.navGnd li {
+  float: left;
+  margin-left: 30px;
+}
+.navGnd a {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* ================== footer ================== */
+
+footer {
+  background-color: #dddddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+.footerLogo {
+}
+.footerLogo img {
+  width: 100px;
+}
+.footerTop {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #878787;
+  color: #666666;
+}
+.footerTop small {
+  float: left;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.footerTop > ul > li {
+  float: left;
+  font-size: 12px;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+.footerTop > ul > li > a {
+  color: #666666;
+}
+.footerTop > ul > li > a:hover {
+  color: #333333;
+}
+.footer p {
+  font-size: 12px;
+  color: #666666;
 }
