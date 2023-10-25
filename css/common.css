@@ -385,12 +385,19 @@ textarea {
 
 /* ================== header ================== */
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 nav {
+  height: 70px;
   background-color: #181818;
 }
 .navLogo {
   float: left;
+  height: 70px;
   padding: 15px;
   background-color: #000000;
 }
@@ -399,7 +406,7 @@ nav {
 }
 .navRight {
   width: 100%;
-  padding: 20px 30px;
+  padding: 23px 30px;
 }
 .navMenu {
   float: left;
