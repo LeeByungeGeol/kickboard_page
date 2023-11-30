@@ -22,6 +22,7 @@ input,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 
 html {
@@ -60,6 +61,11 @@ body {
   font-family: "NanumBarunGothic", sans-serif;
   font-size: 16px;
   color: #333;
+  padding-top: 70px;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 120px;
+  position: relative;
 }
 
 .blind {
@@ -175,6 +181,9 @@ textarea {
 .mb_20 {
   margin-bottom: 20px !important;
 }
+.mb_50 {
+  margin-bottom: 50px !important;
+}
 .mt_0 {
   margin-top: 0px !important;
 }
@@ -214,8 +223,14 @@ textarea {
 .mt_30 {
   margin-top: 30px !important;
 }
+.mt_40 {
+  margin-top: 40px !important;
+}
 .mt_50 {
   margin-top: 50px !important;
+}
+.mt_70 {
+  margin-top: 70px !important;
 }
 .m_center {
   margin: 0 auto !important;
@@ -231,6 +246,9 @@ textarea {
 }
 .mb_20 {
   margin-bottom: 20px !important;
+}
+.mb_30 {
+  margin-bottom: 30px !important;
 }
 .m_zero {
   margin: 0 !important;
@@ -469,12 +487,27 @@ nav {
   font-size: 20px;
 }
 
+/* ================== page bottom Button ================== */
+
+.pageBottomBtn {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.pageBottomBtn a {
+  margin: 0 auto;
+}
+
 /* ================== footer ================== */
 
 footer {
   background-color: #dddddd;
+  width: 100%;
   padding: 20px;
-  margin-top: 20px;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .footerLogo {
 }
